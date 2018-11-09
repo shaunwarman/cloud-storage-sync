@@ -4,8 +4,14 @@ const { Storage } = require('@google-cloud/storage');
 
 const storage = new Storage();
 
-function copyFile(options) {
-  assert(options);
+const copyFile = options => {
+  ['srcBucketName', 'srcFilename', 'destBucketName', 'destFilename'].forEach(
+    prop => {
+      if (!options[prop]) {
+        throw new Error(`${prop} is not specified in options`);
+      }
+    }
+  );
 
   const {
     srcBucketName,
@@ -32,18 +38,30 @@ function copyFile(options) {
       }
     }
   });
-}
+};
 
-const assert = options => {
-  ['srcBucketName', 'srcFilename', 'destBucketName', 'destFilename'].forEach(
-    prop => {
-      if (!options[prop]) {
-        throw new Error(`${prop} is not specified in options`);
-      }
+const copyFiles = options => {
+  const { srcBucketName, destBucketName, files } = options;
+
+  ['srcBucketName', 'destBucketName', 'files'].forEach(prop => {
+    if (!options[prop]) {
+      throw new Error(
+        'options object should contain `srcBucketName`, `destBucketName`, `files`'
+      );
     }
-  );
+  });
+
+  return files.map(file => {
+    return copyFile({
+      srcBucketName,
+      destBucketName,
+      srcFileName: file,
+      destFileName: file
+    });
+  });
 };
 
 module.exports = {
-  copyFile
+  copyFile,
+  copyFiles
 };
