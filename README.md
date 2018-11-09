@@ -1,12 +1,12 @@
-# cloud-storage-sync
+# google-cloud-storage-sync
 
-[![build status](https://img.shields.io/travis/shaunwarman/cloud-storage-sync.svg)](https://travis-ci.com/shaunwarman/cloud-storage-sync)
-[![code coverage](https://img.shields.io/codecov/c/github/shaunwarman/cloud-storage-sync.svg)](https://codecov.io/gh/shaunwarman/cloud-storage-sync)
+[![build status](https://img.shields.io/travis/shaunwarman/google-cloud-storage-sync.svg)](https://travis-ci.com/shaunwarman/google-cloud-storage-sync)
+[![code coverage](https://img.shields.io/codecov/c/github/shaunwarman/google-cloud-storage-sync.svg)](https://codecov.io/gh/shaunwarman/google-cloud-storage-sync)
 [![code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![made with lass](https://img.shields.io/badge/made_with-lass-95CC28.svg)](https://lass.js.org)
-[![license](https://img.shields.io/github/license/shaunwarman/cloud-storage-sync.svg)](LICENSE)
-[![npm downloads](https://img.shields.io/npm/dt/cloud-storage-sync.svg)](https://npm.im/cloud-storage-sync)
+[![license](https://img.shields.io/github/license/shaunwarman/google-cloud-storage-sync.svg)](LICENSE)
+[![npm downloads](https://img.shields.io/npm/dt/google-cloud-storage-sync.svg)](https://npm.im/google-cloud-storage-sync)
 
 > A google cloud storage function to sync buckets
 
@@ -24,20 +24,20 @@
 [npm][]:
 
 ```sh
-npm install cloud-storage-sync
+npm install google-cloud-storage-sync
 ```
 
 [yarn][]:
 
 ```sh
-yarn add cloud-storage-sync
+yarn add google-cloud-storage-sync
 ```
 
 
 ## Usage
 
 ```js
-const { copyFile } = require('cloud-storage-sync');
+const { copyFile } = require('google-cloud-storage-sync');
 
 (async () => {
   const options = {

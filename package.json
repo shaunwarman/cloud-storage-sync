@@ -1,5 +1,5 @@
 {
-  "name": "cloud-storage-sync",
+  "name": "google-cloud-storage-sync",
   "description": "A google cloud storage function to sync buckets",
   "version": "0.0.1",
   "author": "Shaun Warman <shaunwarman1@gmail.com> (https://shaunwarman.com)",
@@ -8,7 +8,7 @@
     "verbose": true
   },
   "bugs": {
-    "url": "https://github.com/shaunwarman/cloud-storage-sync/issues",
+    "url": "https://github.com/shaunwarman/google-cloud-storage-sync/issues",
     "email": "shaunwarman1@gmail.com"
   },
   "commitlint": {
@@ -45,7 +45,7 @@
   "engines": {
     "node": ">=8.3"
   },
-  "homepage": "https://github.com/shaunwarman/cloud-storage-sync",
+  "homepage": "https://github.com/shaunwarman/google-cloud-storage-sync",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm test",
@@ -100,7 +100,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shaunwarman/cloud-storage-sync"
+    "url": "https://github.com/shaunwarman/google-cloud-storage-sync"
   },
   "scripts": {
     "ava": "cross-env NODE_ENV=test ava",
