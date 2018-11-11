@@ -1,7 +1,7 @@
 {
   "name": "google-cloud-storage-sync",
   "description": "A google cloud storage function to sync buckets",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Shaun Warman <shaunwarman1@gmail.com> (https://shaunwarman.com)",
   "ava": {
     "failFast": true,
