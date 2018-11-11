@@ -5,7 +5,7 @@ const { Storage } = require('@google-cloud/storage');
 const storage = new Storage();
 
 const copyFile = options => {
-  ['srcBucketName', 'srcFilename', 'destBucketName', 'destFilename'].forEach(
+  ['srcBucketName', 'srcFileName', 'destBucketName', 'destFileName'].forEach(
     prop => {
       if (!options[prop]) {
         throw new Error(`${prop} is not specified in options`);
